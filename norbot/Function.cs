@@ -14,8 +14,11 @@ namespace norbot
 
             switch (lexEvent.CurrentIntent.Name)
             {
-                case "GetBin":
+                case "GetCollectionDetails":
                     process = new GetBinIntentProcessor();
+                    break;
+                case "Default":
+                    process = new DefaultIntentProcessor();
                     break;
                 case "Debug":
                     process = new DebugIntentProcessor();
